@@ -1,0 +1,73 @@
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+}
+.checkers {
+	max-width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	font-size: 0;
+	border: 1px solid black;
+}
+.checkers ul {
+	display: block;
+	width: 100%;
+	height: 12.5%;
+	list-style: none;
+    padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.checkers ul li {
+	display: inline-block;
+	position: relative;
+	width: 12.5%;
+	height: 100%;
+	font-size: 0;
+	border: 1px solid black;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+ul:nth-child(odd) li:nth-child(odd) {
+	background-color: black;
+}
+ul:nth-child(even) li:nth-child(even) {
+	background-color: black;
+}
+ul.player1:nth-child(odd) li:nth-child(odd)::after,
+ul.player1:nth-child(2) li:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: darkgray;
+    top: 14%;
+    left: 14%;
+    border-radius: 50%;
+} 
+
+ul.player2:nth-last-child(odd) li:nth-child(even)::after,
+ul.player2:nth-last-child(2) li:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    top: 14%;
+    left: 14%;
+    border-radius: 50%;
+} 
+
+
+
+
+
+
+
+
